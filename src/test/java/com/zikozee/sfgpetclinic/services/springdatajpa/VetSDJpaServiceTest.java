@@ -8,6 +8,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.BDDMockito.then;
+import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -21,9 +23,12 @@ class VetSDJpaServiceTest {
 
     @Test
     void deleteById() {
+        //given - none
 
+        //when
         service.deleteById(1L);
 
-        verify(vetRepository).deleteById(1L);
+        //then
+        then(vetRepository).should(atLeastOnce()).deleteById(1L);
     }
 }
