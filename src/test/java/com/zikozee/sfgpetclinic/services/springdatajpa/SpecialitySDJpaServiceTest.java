@@ -25,7 +25,7 @@ class SpecialitySDJpaServiceTest {
     @InjectMocks
     SpecialitySDJpaService service;
     //this will create an instance of this service and inject the specialityRepository mock in the constructor
-
+   //TODO note it will be injected. specialtyRepository will be injected in service(SpecialitySDJpaService)
 
     @Test
     void testDeleteByObject() {

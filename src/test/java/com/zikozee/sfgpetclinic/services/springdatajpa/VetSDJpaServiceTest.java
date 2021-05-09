@@ -19,7 +19,7 @@ class VetSDJpaServiceTest {
     VetRepository vetRepository;
 
     @InjectMocks
-    VetSDJpaService service;
+    VetSDJpaService service;   //TODO note it will be injected. vetRepository will be injected in service
 
     @Test
     void deleteById() {
